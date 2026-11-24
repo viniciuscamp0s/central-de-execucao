@@ -1,0 +1,214 @@
+/* Tokens de cor, espaço, raio e superfície da tela (claro e escuro). O tema segue o aparelho; o botão da tela grava a escolha neste navegador. */
+
+:root:has(.central-app) {
+  --mh-fundo: #e9eef7;
+  --mh-ambiente-1: rgba(10, 132, 255, 0.14);
+  --mh-ambiente-2: rgba(48, 196, 214, 0.1);
+  --mh-ambiente-3: rgba(94, 92, 230, 0.08);
+  --mh-cartao: rgba(255, 255, 255, 0.55);
+  --mh-texto: #0f172a;
+  --mh-sec: rgba(30, 41, 59, 0.68);
+  --mh-ter: rgba(30, 41, 59, 0.5);
+  --mh-azul: #0066cc;
+  --mh-azul-texto: #0058b0;
+  --mh-verde: #1f7a3a;
+  --mh-verde-fundo: rgba(36, 138, 61, 0.12);
+  --mh-roxo: #5b4bd6;
+  --mh-roxo-fundo: rgba(94, 92, 230, 0.12);
+  --mh-alerta: #b45309;
+  --mh-trilho: rgba(15, 23, 42, 0.08);
+  --mh-icone-fundo: rgba(15, 23, 42, 0.06);
+  --mh-vidro-tinta: rgba(255, 255, 255, 0.26);
+  --mh-vidro-tinta-forte: rgba(255, 255, 255, 0.42);
+  --mh-vidro-sombra: 0 10px 28px rgba(20, 50, 110, 0.12), 0 1px 3px rgba(20, 50, 110, 0.08);
+  --mh-vidro-azul: rgba(0, 102, 204, 0.82);
+  --mh-gaveta: rgba(240, 244, 251, 0.72);
+  --mh-luz-1: rgba(0, 102, 204, 0.26);
+  --mh-luz-2: rgba(10, 132, 255, 0.3);
+  --mh-luz-3: rgba(90, 170, 255, 0.4);
+  --mh-luz-mistura: normal;
+  --mh-lg-tinta: rgba(255, 255, 255, 0.12);
+  --mh-lg-sombra: 0 10px 28px rgba(20, 50, 110, 0.12);
+  --mh-lg-volume: rgba(255, 255, 255, 0.35);
+  --mh-lg-aro-alto: rgba(255, 255, 255, 1);
+  --mh-lg-aro-baixo: rgba(255, 255, 255, 0.7);
+  --mh-lg-faixa: rgba(255, 255, 255, 0.55);
+  --mh-lg-brilho: rgba(255, 255, 255, 0.4);
+  --mh-lg-tinta-azul: linear-gradient(180deg, rgba(10, 132, 255, 0.78), rgba(0, 102, 204, 0.86));
+  --mh-lg-borda-foco: rgba(0, 102, 204, 0.45);
+  --mm-barra: rgba(0, 102, 204, 0.3);
+  --mm-barra-destaque: #0066cc;
+  --mm-vazia: rgba(60, 60, 67, 0.1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:has(.central-app:not([data-theme="light"])) {
+    --mh-fundo: #02050d;
+    --mh-ambiente-1: rgba(29, 78, 216, 0.16);
+    --mh-ambiente-2: rgba(14, 116, 144, 0.08);
+    --mh-ambiente-3: rgba(67, 56, 202, 0.1);
+    --mh-cartao: rgba(255, 255, 255, 0.04);
+    --mh-texto: #e8edf7;
+    --mh-sec: rgba(203, 213, 235, 0.68);
+    --mh-ter: rgba(203, 213, 235, 0.46);
+    --mh-azul: #3b8cff;
+    --mh-azul-texto: #6aa8ff;
+    --mh-verde: #4ade80;
+    --mh-verde-fundo: rgba(74, 222, 128, 0.12);
+    --mh-roxo: #a5a1ff;
+    --mh-roxo-fundo: rgba(129, 120, 255, 0.16);
+    --mh-alerta: #fbbf24;
+    --mh-trilho: rgba(255, 255, 255, 0.08);
+    --mh-icone-fundo: rgba(255, 255, 255, 0.06);
+    --mh-vidro-tinta: rgba(255, 255, 255, 0.035);
+    --mh-vidro-tinta-forte: rgba(255, 255, 255, 0.08);
+    --mh-vidro-sombra: 0 1px 1px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.42);
+    --mh-vidro-azul: rgba(30, 110, 255, 0.62);
+    --mh-gaveta: rgba(6, 11, 24, 0.7);
+    --mh-luz-1: rgba(20, 70, 230, 0.62);
+    --mh-luz-2: rgba(40, 110, 255, 0.78);
+    --mh-luz-3: rgba(130, 190, 255, 0.85);
+    --mh-luz-mistura: screen;
+    --mh-lg-tinta: rgba(255, 255, 255, 0.015);
+    --mh-lg-sombra: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --mh-lg-volume: rgba(255, 255, 255, 0.04);
+    --mh-lg-aro-alto: rgba(255, 255, 255, 0.55);
+    --mh-lg-aro-baixo: rgba(255, 255, 255, 0.18);
+    --mh-lg-faixa: rgba(255, 255, 255, 0.16);
+    --mh-lg-brilho: rgba(255, 255, 255, 0.18);
+    --mh-lg-tinta-azul: linear-gradient(180deg, rgba(40, 120, 255, 0.62), rgba(20, 80, 220, 0.72));
+    --mh-lg-borda-foco: rgba(120, 180, 255, 0.5);
+    --mh-lg-texto-sombra: 0 1px 6px rgba(0, 0, 0, 0.3);
+    --mm-barra: rgba(100, 170, 255, 0.34);
+    --mm-barra-destaque: #64a8ff;
+    --mm-vazia: rgba(255, 255, 255, 0.08);
+  }
+}
+:root:has(.central-app[data-theme="dark"]) {
+  --mh-fundo: #02050d;
+  --mh-ambiente-1: rgba(29, 78, 216, 0.16);
+  --mh-ambiente-2: rgba(14, 116, 144, 0.08);
+  --mh-ambiente-3: rgba(67, 56, 202, 0.1);
+  --mh-cartao: rgba(255, 255, 255, 0.04);
+  --mh-texto: #e8edf7;
+  --mh-sec: rgba(203, 213, 235, 0.68);
+  --mh-ter: rgba(203, 213, 235, 0.46);
+  --mh-azul: #3b8cff;
+  --mh-azul-texto: #6aa8ff;
+  --mh-verde: #4ade80;
+  --mh-verde-fundo: rgba(74, 222, 128, 0.12);
+  --mh-roxo: #a5a1ff;
+  --mh-roxo-fundo: rgba(129, 120, 255, 0.16);
+  --mh-alerta: #fbbf24;
+  --mh-trilho: rgba(255, 255, 255, 0.08);
+  --mh-icone-fundo: rgba(255, 255, 255, 0.06);
+  --mh-vidro-tinta: rgba(255, 255, 255, 0.035);
+  --mh-vidro-tinta-forte: rgba(255, 255, 255, 0.08);
+  --mh-vidro-sombra: 0 1px 1px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.42);
+  --mh-vidro-azul: rgba(30, 110, 255, 0.62);
+  --mh-gaveta: rgba(6, 11, 24, 0.7);
+  --mh-luz-1: rgba(20, 70, 230, 0.62);
+  --mh-luz-2: rgba(40, 110, 255, 0.78);
+  --mh-luz-3: rgba(130, 190, 255, 0.85);
+  --mh-luz-mistura: screen;
+  --mh-lg-tinta: rgba(255, 255, 255, 0.015);
+  --mh-lg-sombra: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --mh-lg-volume: rgba(255, 255, 255, 0.04);
+  --mh-lg-aro-alto: rgba(255, 255, 255, 0.55);
+  --mh-lg-aro-baixo: rgba(255, 255, 255, 0.18);
+  --mh-lg-faixa: rgba(255, 255, 255, 0.16);
+  --mh-lg-brilho: rgba(255, 255, 255, 0.18);
+  --mh-lg-tinta-azul: linear-gradient(180deg, rgba(40, 120, 255, 0.62), rgba(20, 80, 220, 0.72));
+  --mh-lg-borda-foco: rgba(120, 180, 255, 0.5);
+  --mh-lg-texto-sombra: 0 1px 6px rgba(0, 0, 0, 0.3);
+  --mm-barra: rgba(100, 170, 255, 0.34);
+  --mm-barra-destaque: #64a8ff;
+  --mm-vazia: rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Tokens ---------- */
+:root:has(#m-app) {
+  /* espaçamento em passos de 4 */
+  --m-e1: 4px;
+  --m-e2: 8px;
+  --m-e3: 12px;
+  --m-e4: 16px;
+  --m-e5: 20px;
+  --m-e6: 24px;
+  --m-e7: 32px;
+  --m-e8: 40px;
+  /* raios */
+  --m-r-card: 20px;
+  --m-r-bloco: 14px;
+  --m-r-chip: 999px;
+  /* movimento: as curvas da pílula elástica (power3 = quart) */
+  --m-curva-frente: cubic-bezier(0.25, 1, 0.5, 1);
+  --m-curva-tras: cubic-bezier(0.76, 0, 0.24, 1);
+  --m-dur-frente: 0.36s;
+  --m-dur-tras: 0.55s;
+  --m-dur-entrada: 0.52s;
+  /* superfícies (claro) */
+  --m-sup-1: rgba(255, 255, 255, 0.66);
+  --m-sup-2: rgba(15, 23, 42, 0.045);
+  --m-sup-3: #ffffff;
+  --m-aresta: rgba(15, 23, 42, 0.07);
+  --m-brilho: rgba(255, 255, 255, 0.9);
+  --m-sombra-card: 0 1px 2px rgba(20, 50, 110, 0.05), 0 10px 30px -12px rgba(20, 50, 110, 0.14);
+  --m-pilula-fundo: var(--m-sup-3);
+  --m-pilula-sombra: rgba(20, 50, 110, 0.14);
+  --m-pilula-nav: #ffffff;
+  --m-pilula-nav-texto: var(--mh-azul-texto);
+  --m-vermelho: #c4161c;
+  /* texto de chip no claro, um tom abaixo da paleta base para passar AA sobre o fundo tingido */
+  --m-chip-verde: #17652f;
+  --m-chip-alerta: #8f4006;
+
+  /* os tokens base da tela (--m-*) apontam para a paleta (--mh-*) */
+  --m-bg: var(--mh-fundo);
+  --m-grouped: var(--m-sup-2);
+  --m-card: var(--m-sup-1);
+  --m-elevated: var(--m-sup-3);
+  --m-text: var(--mh-texto);
+  --m-secondary: var(--mh-sec);
+  --m-separator: var(--m-aresta);
+  --m-tint: var(--mh-azul);
+  --m-green: var(--mh-verde);
+  --m-orange: var(--mh-alerta);
+  --m-red: var(--m-vermelho);
+  --m-material: var(--mh-gaveta);
+  --m-shadow: var(--m-sombra-card);
+}
+@media (prefers-color-scheme: dark) {
+  :root:has(#m-app:not([data-theme="light"])) {
+    --m-sup-1: rgba(148, 170, 220, 0.055);
+    --m-sup-2: rgba(255, 255, 255, 0.045);
+    --m-sup-3: rgba(255, 255, 255, 0.1);
+    --m-aresta: rgba(255, 255, 255, 0.065);
+    --m-brilho: rgba(255, 255, 255, 0.06);
+    --m-sombra-card: 0 1px 1px rgba(0, 0, 0, 0.35), 0 18px 40px -18px rgba(0, 0, 0, 0.7);
+    --m-pilula-sombra: rgba(0, 0, 0, 0.4);
+    --m-pilula-nav: color-mix(in srgb, var(--mh-azul) 30%, rgba(255, 255, 255, 0.04));
+    --m-pilula-nav-texto: var(--mh-texto);
+    --m-vermelho: #ff7a72;
+    --m-chip-verde: var(--mh-verde);
+    --m-chip-alerta: var(--mh-alerta);
+  }
+}
+:root:has(#m-app[data-theme="dark"]) {
+  --m-sup-1: rgba(148, 170, 220, 0.055);
+  --m-sup-2: rgba(255, 255, 255, 0.045);
+  --m-sup-3: rgba(255, 255, 255, 0.1);
+  --m-aresta: rgba(255, 255, 255, 0.065);
+  --m-brilho: rgba(255, 255, 255, 0.06);
+  --m-sombra-card: 0 1px 1px rgba(0, 0, 0, 0.35), 0 18px 40px -18px rgba(0, 0, 0, 0.7);
+  --m-pilula-sombra: rgba(0, 0, 0, 0.4);
+  --m-pilula-nav: color-mix(in srgb, var(--mh-azul) 30%, rgba(255, 255, 255, 0.04));
+  --m-pilula-nav-texto: var(--mh-texto);
+  --m-vermelho: #ff7a72;
+  --m-chip-verde: var(--mh-verde);
+  --m-chip-alerta: var(--mh-alerta);
+}
+
+/* ---------- Fundo das telas (o fundo profundo com a luz ambiente) ---------- */
+body:has(#m-app) {
+  background: var(--mh-fundo);
+}

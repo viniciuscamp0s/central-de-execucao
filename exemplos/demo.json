@@ -1,0 +1,32 @@
+{
+  "sessoes": [
+    {
+      "arquivo": "claude/projects/-projetos-loja-online/exemplo0-aaaa-4aaa-8aaa-aaaaaaa00001.jsonl",
+      "idadeMin": 0.3
+    },
+    {
+      "arquivo": "claude/projects/-projetos-loja-online/exemplo0-aaaa-4aaa-8aaa-aaaaaaa00002.jsonl",
+      "idadeMin": 190
+    },
+    {
+      "arquivo": "claude/projects/-projetos-api-pagamentos/exemplo0-aaaa-4aaa-8aaa-aaaaaaa00003.jsonl",
+      "idadeMin": 12
+    },
+    {
+      "arquivo": "codex/sessions/2026/01/05/rollout-2026-01-05T09-00-00-exemplo0-aaaa-4aaa-8aaa-aaaaaaa00004.jsonl",
+      "idadeMin": 35
+    },
+    {
+      "arquivo": "claude/projects/-projetos-site-institucional/exemplo0-aaaa-4aaa-8aaa-aaaaaaa00005.jsonl",
+      "idadeMin": 300
+    },
+    {
+      "arquivo": "claude/projects/-projetos-relatorios-semanais/exemplo0-aaaa-4aaa-8aaa-aaaaaaa00006.jsonl",
+      "idadeMin": 1560
+    },
+    {
+      "arquivo": "codex/sessions/2026/01/02/rollout-2026-01-02T09-00-00-exemplo0-aaaa-4aaa-8aaa-aaaaaaa00007.jsonl",
+      "idadeMin": 3600
+    }
+  ]
+}

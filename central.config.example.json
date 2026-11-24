@@ -1,8 +1,9 @@
 {
-  "horas": 48,
+  "horas": 168,
   "porta": 4555,
   "ativaMinutos": 3,
   "paradaMinutos": 60,
+  "ativaAgoraSegundos": 45,
   "mostrarSubagentes": false,
   "temas": [
     { "tema": "Site da empresa", "palavras": ["landing", "site", "lp-"] },

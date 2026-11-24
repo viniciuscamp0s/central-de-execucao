@@ -1,0 +1,137 @@
+/* O núcleo visual: fundo com luz ambiente, tipografia, pílula elástica dos filtros e a entrada da tela. */
+
+.m-content {
+  position: relative;
+  isolation: isolate;
+  max-width: 1240px;
+  gap: var(--m-e6);
+}
+.m-content::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(42% 50% at 6% 4%, var(--mh-ambiente-1), transparent 70%),
+    radial-gradient(36% 42% at 98% 24%, var(--mh-ambiente-2), transparent 70%),
+    radial-gradient(46% 40% at 52% 0%, var(--mh-ambiente-3), transparent 72%);
+}
+
+/* ---------- Tipografia: título, rótulo pequeno, número grande ---------- */
+.m-content .m-large-title {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 650;
+  letter-spacing: -0.035em;
+}
+.m-content .m-title-2 {
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 620;
+  letter-spacing: -0.01em;
+}
+.m-heading > .m-subheadline:has(+ .m-large-title) {
+  font-size: 12.5px;
+  line-height: 16px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--mh-sec);
+}
+
+/* ---------- Pílula elástica ----------
+   O grupo ganha uma camada ::before do tamanho dele, recortada por clip-path inset(t r b l round …): o script
+   (movimento.ts) escreve --m-pilula-clip a cada quadro, com as quatro bordas andando separadas.
+   Os itens ficam por cima (z-index 1) e o item atual perde o fundo próprio enquanto a pílula está pronta. */
+[data-pilula] {
+  position: relative;
+  isolation: isolate;
+}
+[data-pilula]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: var(--m-pilula-fundo);
+  clip-path: var(--m-pilula-clip, inset(50% 50% 50% 50%));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+[data-pilula][data-pilula-pronta]::before {
+  opacity: 1;
+}
+[data-pilula] > * {
+  position: relative;
+  z-index: 1;
+}
+[data-pilula-pronta] :is([aria-pressed="true"], [data-ativo]) {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+/* ---------- Entrada ----------
+   A tela entra subindo e aparecendo (só CSS) e os blocos sobem em cascata. Nada guarda o estado final (sem
+   "forwards"): ao terminar, não sobra filter nem opacity no conteúdo. */
+#conteudo-central {
+  animation: m-tela-entra var(--m-dur-entrada) var(--m-curva-frente);
+}
+@keyframes m-tela-entra {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+.m-content > .m-stack > * {
+  animation: m-sobe 0.62s var(--m-curva-frente) backwards;
+}
+.m-content .m-stack > :nth-child(2) {
+  animation-delay: 50ms;
+}
+.m-content .m-stack > :nth-child(3) {
+  animation-delay: 100ms;
+}
+.m-content .m-stack > :nth-child(4) {
+  animation-delay: 150ms;
+}
+.m-content .m-stack > :nth-child(n + 5) {
+  animation-delay: 200ms;
+}
+@keyframes m-sobe {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+/* Gráfico: o desenho se revela da esquerda para a direita. */
+.m-graf-plot {
+  animation: m-graf-revela 1.2s 0.15s var(--m-curva-tras) backwards;
+}
+@keyframes m-graf-revela {
+  from {
+    clip-path: inset(-10% 100% -10% 0);
+  }
+  to {
+    clip-path: inset(-10% 0 -10% 0);
+  }
+}
+
+@media (min-width: 768px) {
+  .m-content {
+    padding: 36px 40px 64px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #conteudo-central,
+  .m-content .m-stack > *,
+  .m-graf-plot {
+    animation: none !important;
+  }
+  [data-pilula]::before {
+    transition: none;
+  }
+}

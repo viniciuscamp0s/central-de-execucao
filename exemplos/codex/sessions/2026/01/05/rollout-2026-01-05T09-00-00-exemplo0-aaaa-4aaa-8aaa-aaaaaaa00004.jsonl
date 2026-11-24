@@ -1,0 +1,11 @@
+{"timestamp":"2026-01-05T09:00:00.000Z","type":"session_meta","payload":{"id":"exemplo0-aaaa-4aaa-8aaa-aaaaaaa00004","timestamp":"2026-01-05T09:00:00.000Z","cwd":"/projetos/app-mobile","originator":"codex_cli_rs","cli_version":"0.46.0","source":"cli","git":{"branch":"feature/novo-login"}}}
+{"timestamp":"2026-01-05T09:00:06.000Z","type":"response_item","payload":{"type":"message","role":"user","content":[{"type":"input_text","text":"Migre as telas de login e de recuperação de senha para o novo layout."}]}}
+{"timestamp":"2026-01-05T09:00:06.000Z","type":"turn_context","payload":{"cwd":"/projetos/app-mobile","model":"gpt-5-codex","approval_policy":"on-request"}}
+{"timestamp":"2026-01-05T09:02:06.000Z","type":"response_item","payload":{"type":"function_call","name":"shell","arguments":"{\"command\":\"rg -l LayoutAntigo src\"}","call_id":"call_demo_4_0"}}
+{"timestamp":"2026-01-05T09:02:18.000Z","type":"response_item","payload":{"type":"function_call_output","call_id":"call_demo_4_0","output":"ok"}}
+{"timestamp":"2026-01-05T09:02:18.000Z","type":"response_item","payload":{"type":"message","role":"assistant","content":[{"type":"output_text","text":"Vou listar as telas que ainda usam o layout antigo."}]}}
+{"timestamp":"2026-01-05T09:02:18.000Z","type":"event_msg","payload":{"type":"token_count","info":{"total_token_usage":{"input_tokens":1053000,"cached_input_tokens":810000,"output_tokens":27000,"reasoning_output_tokens":0,"total_tokens":1080000}}}}
+{"timestamp":"2026-01-05T09:04:18.000Z","type":"response_item","payload":{"type":"function_call","name":"shell","arguments":"{\"command\":\"npm test -- login\"}","call_id":"call_demo_4_1"}}
+{"timestamp":"2026-01-05T09:04:30.000Z","type":"response_item","payload":{"type":"function_call_output","call_id":"call_demo_4_1","output":"ok"}}
+{"timestamp":"2026-01-05T09:04:30.000Z","type":"response_item","payload":{"type":"message","role":"assistant","content":[{"type":"output_text","text":"Migrei a tela de login. Falta a de recuperação de senha, que depende de um componente novo de campo."}]}}
+{"timestamp":"2026-01-05T09:04:30.000Z","type":"event_msg","payload":{"type":"token_count","info":{"total_token_usage":{"input_tokens":2106000,"cached_input_tokens":1620000,"output_tokens":54000,"reasoning_output_tokens":0,"total_tokens":2160000}}}}
