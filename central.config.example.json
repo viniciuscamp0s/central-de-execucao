@@ -1,0 +1,15 @@
+{
+  "horas": 48,
+  "porta": 4555,
+  "ativaMinutos": 3,
+  "paradaMinutos": 60,
+  "mostrarSubagentes": false,
+  "temas": [
+    { "tema": "Site da empresa", "palavras": ["landing", "site", "lp-"] },
+    { "tema": "CRM", "regex": "crm|pipeline|follow.?up", "onde": ["titulo", "pedido", "pasta"] },
+    { "tema": "Conteúdo", "palavras": ["carrossel", "reels", "roteiro", "legenda"] }
+  ],
+  "interfaces": {
+    "meu-app-interno": "Painel interno"
+  }
+}
